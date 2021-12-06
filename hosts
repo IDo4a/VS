@@ -1,0 +1,5 @@
+[yandex]
+51.250.8.233
+
+[yandex:vars]
+ansible_user=ubuntu

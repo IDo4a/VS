@@ -1,0 +1,21 @@
+- hosts: yandex
+  become: true
+  
+  tasks:
+   - name: Ping test
+     ping:
+     
+   - name: Update
+     apt:
+       update_cache: yes
+   
+   - name: Install packages Nginx
+     apt:
+       name: nginx
+       state: latest
+
+   - name: Copy file
+     ansible.builtin.copy:
+       src: /var/www/html
+       dest: /artemromanchik
+       remote_src: yes
